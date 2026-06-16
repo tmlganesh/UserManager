@@ -299,12 +299,12 @@ sqlc generate
 ### Query Definitions (`db/query/user.sql`)
 
 Six queries are defined:
-- `CreateUser` — INSERT with RETURNING
-- `GetUser` — SELECT by ID
-- `ListUsers` — SELECT with LIMIT/OFFSET
-- `UpdateUser` — UPDATE with RETURNING
-- `DeleteUser` — DELETE by ID
-- `CountUsers` — COUNT for pagination
+- `CreateUser` - INSERT with RETURNING
+- `GetUser` - SELECT by ID
+- `ListUsers` - SELECT with LIMIT/OFFSET
+- `UpdateUser` - UPDATE with RETURNING
+- `DeleteUser` - DELETE by ID
+- `CountUsers` - COUNT for pagination
 
 ---
 

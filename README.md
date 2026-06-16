@@ -1,10 +1,10 @@
-# 🚀 Ainyx — User Management REST API
+#  Ainyx — User Management REST API
 
 A production-quality Go REST API for managing users, built with clean architecture principles. Designed as an internship assignment demonstrating strong engineering practices, idiomatic Go, and interview-ready code quality.
 
 ---
 
-## 📋 Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -18,7 +18,7 @@ A production-quality Go REST API for managing users, built with clean architectu
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 The project follows **clean architecture** with strict layer separation:
 
@@ -52,7 +52,7 @@ HTTP Request
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 ainyx/
@@ -102,7 +102,7 @@ ainyx/
 
 ---
 
-## 🔧 Environment Variables
+##  Environment Variables
 
 | Variable | Description | Default |
 |---|---|---|
@@ -118,7 +118,7 @@ cp .env.example .env
 
 ---
 
-## 🐳 Running with Docker (Recommended)
+##  Running with Docker (Recommended)
 
 The fastest way to get everything running — no manual setup required.
 
@@ -134,7 +134,7 @@ Migrations run automatically on startup.
 
 ---
 
-## 💻 Running Locally
+##  Running Locally
 
 ### Prerequisites
 - Go 1.23+
@@ -174,7 +174,7 @@ The server starts on `http://localhost:3000`.
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Health Check
 
@@ -267,7 +267,7 @@ curl "http://localhost:3000/users?page=1&limit=10"
 
 ---
 
-## 🧪 SQLC Usage
+##  SQLC Usage
 
 SQLC generates type-safe Go code from raw SQL queries. No ORM, no runtime reflection.
 
@@ -308,7 +308,7 @@ Six queries are defined:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Run unit tests:
 
@@ -337,7 +337,7 @@ go test ./tests/ -v -cover
 
 ---
 
-## 🎯 Design Decisions
+##  Design Decisions
 
 ### 1. Age Is Never Stored
 
@@ -380,7 +380,7 @@ The server listens for SIGINT/SIGTERM and calls `app.Shutdown()` before exiting.
 
 ---
 
-## 📖 Package Guide
+##  Package Guide
 
 | Package | Purpose |
 |---|---|
@@ -399,7 +399,7 @@ The server listens for SIGINT/SIGTERM and calls `app.Shutdown()` before exiting.
 
 ---
 
-## 🎤 Interview Preparation
+##  Interview Preparation
 
 ### Q: Why not store age in the database?
 
@@ -431,6 +431,6 @@ Fiber provides routing, middleware composition, and JSON handling with significa
 
 ---
 
-## 📄 License
+##  License
 
 MIT

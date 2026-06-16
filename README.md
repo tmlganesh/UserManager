@@ -397,39 +397,6 @@ The server listens for SIGINT/SIGTERM and calls `app.Shutdown()` before exiting.
 | `db/query` | SQLC query definitions |
 | `configs` | Environment-based configuration |
 
----
-
-##  Interview Preparation
-
-### Q: Why not store age in the database?
-
-Age changes daily. Storing it creates a stale data problem that requires a daily cron job to fix. Computing it on the fly from `dob` is O(1), always correct, and eliminates an entire class of bugs.
-
-### Q: Why use an interface for the repository?
-
-It inverts the dependency — the service depends on an abstraction, not a concrete implementation. This makes the service layer unit-testable without a database and allows swapping storage backends.
-
-### Q: How does the Request ID middleware work?
-
-It checks for an existing `X-Request-ID` header (for distributed tracing). If absent, it generates a UUID. The ID is stored in Fiber locals and set on the response header, making it available for downstream logging.
-
-### Q: Why SQLC instead of GORM?
-
-GORM uses runtime reflection and hides SQL behind method chains. SQLC generates code from actual SQL at build time. This gives compile-time safety, visible SQL, and zero runtime overhead.
-
-### Q: How do you handle errors without exposing internals?
-
-The service layer wraps database errors with user-friendly messages (`"failed to create user"`) and logs the real error with Zap. The handler maps sentinel errors like `ErrUserNotFound` to proper HTTP status codes.
-
-### Q: Explain the pagination approach.
-
-Two queries run: `ListUsers` (with LIMIT/OFFSET) and `CountUsers` (total rows). The response includes `page`, `limit`, and `total` so clients can compute total pages. OFFSET-based pagination is simple and sufficient at this scale.
-
-### Q: Why Fiber over standard library?
-
-Fiber provides routing, middleware composition, and JSON handling with significantly less boilerplate than `net/http`. It's built on fasthttp for performance. The handler layer stays thin regardless of framework choice.
-
----
 
 ##  License
 

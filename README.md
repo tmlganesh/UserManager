@@ -1,4 +1,4 @@
-#  Ainyx — User Management REST API
+#User Management REST API
 
 A production-quality Go REST API for managing users, built with clean architecture principles. Designed as an internship assignment demonstrating strong engineering practices, idiomatic Go, and interview-ready code quality.
 
